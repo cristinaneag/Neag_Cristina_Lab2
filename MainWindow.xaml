@@ -9,18 +9,13 @@
     <Grid>
         <Label x:Name="lblTitle" Content="Doughnuts - Bake &amp; Sale" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <GroupBox x:Name="gbRaised" Header="Raised" FontWeight="Bold" Margin="225,104,442,234"/>
-        <Label x:Name="lblGlazedRaised" Content="Glazed" HorizontalAlignment="Right" Margin="0,0,529,282" VerticalAlignment="Bottom" RenderTransformOrigin="-0.036,0.192"/>
-        <TextBox x:Name="txtGlazedRaised" HorizontalAlignment="Right" Margin="0,0,458,282" Text="0" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="38" IsReadOnly="True"/>
-        <Label x:Name="lblSugarRaised" Content="Sugar" HorizontalAlignment="Left" Margin="230,166,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtSugarRaised" HorizontalAlignment="Left" Margin="304,170,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" IsReadOnly="True"/>
         <GroupBox x:Name="gbFilled" Header="Filled" Margin="440,105,214,206" FontWeight="Bold" />
-        <TextBox x:Name="txtChocolateFilled" Margin="80,0,0,0" Text="0" TextWrapping="Wrap" IsReadOnly="True" RenderTransformOrigin="0.5,0.5" Height="19" FontWeight="Normal" HorizontalAlignment="Left" Width="39" />
-        <TextBox x:Name="txtLemonFilled" HorizontalAlignment="Left" Margin="528,130,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" IsReadOnly="True"/>
-        <Label x:Name="lnlLemonFilled" Content="Lemon" HorizontalAlignment="Left" Margin="442,126,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblChocolateFilled" Content="Chocolate" HorizontalAlignment="Left" Margin="440,161,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtVanillaFilled" HorizontalAlignment="Left" Margin="528,201,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" Height="17" IsReadOnly="True"/>
-        <Label x:Name="lblVanillaFilled" Content="Vanilla" HorizontalAlignment="Left" Margin="444,192,0,0" VerticalAlignment="Top"/>
-        <GroupBox x:Name="gbSale" Header="CurrentSale" Margin="155,228,104,26" FontWeight="Bold"/>
+        <TextBox x:Name="txtLemonFilled" HorizontalAlignment="Left" Margin="529,126,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" IsReadOnly="True"/>
+        <Label x:Name="lnlLemonFilled" Content="Lemon" HorizontalAlignment="Left" Margin="444,122,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="lblChocolateFilled" Content="Chocolate" HorizontalAlignment="Left" Margin="440,151,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtVanillaFilled" HorizontalAlignment="Left" Margin="529,188,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" Height="17" IsReadOnly="True"/>
+        <Label x:Name="lblVanillaFilled" Content="Vanilla" HorizontalAlignment="Left" Margin="445,184,0,0" VerticalAlignment="Top"/>
+        <GroupBox x:Name="gbSale" Header="CurrentSale" Margin="126,228,90,10" FontWeight="Bold"/>
         <Label x:Name="lblQuantity" Content="Quantity" HorizontalAlignment="Left" Margin="184,254,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtQuantity" HorizontalAlignment="Left" Margin="254,258,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" Height="22"/>
         <Label x:Name="lblType" Content="Type" HorizontalAlignment="Left" Margin="323,256,0,0" VerticalAlignment="Top"/>
@@ -48,7 +43,11 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <TextBox x:Name="txtChocolateFilled1" HorizontalAlignment="Left" Margin="528,167,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" IsReadOnly="True" Height="20"/>
+        <TextBox x:Name="txtChocolateFilled1" HorizontalAlignment="Left" Margin="529,156,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" IsReadOnly="True" Height="21"/>
+        <Label x:Name="lblGlazedRaised" Content="Glazed" HorizontalAlignment="Left" Margin="229,122,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSugarRaised" Content="Sugar" HorizontalAlignment="Left" Margin="232,154,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtGlazedRaised" HorizontalAlignment="Left" Margin="301,127,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" IsReadOnly="True" Height="17"/>
+        <TextBox x:Name="txtSugarRaised" HorizontalAlignment="Left" Margin="302,161,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" IsReadOnly="True" Height="16"/>
 
     </Grid>
 </Window>
