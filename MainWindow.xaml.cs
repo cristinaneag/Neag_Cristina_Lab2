@@ -51,6 +51,30 @@ namespace Neag_Cristina_Lab2
             myDoughnutMachine.MakeDoughnuts(DoughnutType.Sugar);
         }
 
+        private void lemonToolStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            lemonToolStripMenuItem.IsChecked = true;
+            chocolateToolStripMenuItem.IsChecked = false;
+            vanillaToolStripMenuItem.IsChecked = false;
+            myDoughnutMachine.MakeDoughnuts(DoughnutType.Lemon);
+        }
+
+        private void chocolateToolStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            lemonToolStripMenuItem.IsChecked = false;
+            chocolateToolStripMenuItem.IsChecked = true;
+            vanillaToolStripMenuItem.IsChecked = false;
+            myDoughnutMachine.MakeDoughnuts(DoughnutType.Chocolate);
+        }
+
+        private void vanillaToolStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            lemonToolStripMenuItem.IsChecked = false;
+            chocolateToolStripMenuItem.IsChecked = false;
+            vanillaToolStripMenuItem.IsChecked = true;
+            myDoughnutMachine.MakeDoughnuts(DoughnutType.Vanilla);
+        }
+
         private void DoughnutCompleteHandler()
         {
             switch (myDoughnutMachine.Flavor)
@@ -63,7 +87,18 @@ namespace Neag_Cristina_Lab2
                     mRaisedSugar++;
                     txtSugarRaised.Text = mRaisedSugar.ToString();
                     break;
-                    //...
+                case DoughnutType.Lemon:
+                    mFilledLemon++;
+                    txtLemonFilled.Text = mFilledLemon.ToString();
+                    break;
+                case DoughnutType.Chocolate:
+                    mFilledChocolate++;
+                    txtChocolateFilled1.Text = mFilledChocolate.ToString();
+                    break;
+                case DoughnutType.Vanilla:
+                    mFilledVanilla++;
+                    txtVanillaFilled.Text = mFilledVanilla.ToString();
+                    break;
             }
         }
 
