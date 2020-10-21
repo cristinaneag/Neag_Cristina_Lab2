@@ -6,6 +6,7 @@ using System.Windows.Threading;
 
 namespace Neag_Cristina_Lab2
 {
+    //tipul doughnut care trebuie facuta
     public enum DoughnutType
     {
         Glazed,
@@ -14,10 +15,16 @@ namespace Neag_Cristina_Lab2
         Chocolate,
         Vanilla
     }
-
+    //clasa Doughnut cu propr Type, Price, Date
     class Doughnut
     {
         private DoughnutType mFlavor;
+
+        public Doughnut(DoughnutType aFlavor) // constructor
+        {
+            mTimeOfCreation = DateTime.Now;
+            mFlavor = aFlavor;
+        }
         public DoughnutType Flavor
         {
             get
@@ -49,11 +56,7 @@ namespace Neag_Cristina_Lab2
                 return mTimeOfCreation;
             }
         }
-        public Doughnut(DoughnutType aFlavor) // constructor
-        {
-            mTimeOfCreation = DateTime.Now;
-            mFlavor = aFlavor;
-        }
+        
     }
     class DoughnutMachine : Component
     {
@@ -74,6 +77,8 @@ namespace Neag_Cristina_Lab2
                 mFlavor = value;
             }
         }
+
+        //crearea unui array de Doughnuts
         private System.Collections.ArrayList mDoughnuts = new System.Collections.ArrayList();
         public Doughnut this[int Index]
         {
@@ -86,6 +91,7 @@ namespace Neag_Cristina_Lab2
                 mDoughnuts[Index] = value;
             }
         }
+
         public delegate void DoughnutCompleteDelegate();
         public event DoughnutCompleteDelegate DoughnutComplete;
 
@@ -96,12 +102,16 @@ namespace Neag_Cristina_Lab2
             this.doughnutTimer = new DispatcherTimer();
             this.doughnutTimer.Tick += new System.EventHandler(this.doughnutTimer_Tick);
         }
+
+        //crearea unei Doughnut de un Type 
         private void doughnutTimer_Tick(object sender, EventArgs e)
         {
             Doughnut aDoughnut = new Doughnut(this.Flavor);
             mDoughnuts.Add(aDoughnut);
             DoughnutComplete();
         }
+
+        //setarea Timerului true/false
         public bool Enabled
         {
             set
@@ -109,6 +119,8 @@ namespace Neag_Cristina_Lab2
                 doughnutTimer.IsEnabled = value;
             }
         }
+
+        //setarea intervalului de creare
         public int Interval
         {
             set
@@ -116,7 +128,7 @@ namespace Neag_Cristina_Lab2
                 doughnutTimer.Interval = new TimeSpan(0, 0, value);
             }
         }
-
+        //crearea Doughnuts efectiva, cu setarea unui interval pt fiecare Type
         public void MakeDoughnuts(DoughnutType dFlavor)
         {
             Flavor = dFlavor;

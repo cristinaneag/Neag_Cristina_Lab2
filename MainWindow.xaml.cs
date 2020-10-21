@@ -32,12 +32,14 @@ namespace Neag_Cristina_Lab2
             InitializeComponent();
         }
 
+        //crearea unei masini la incarcarea Window
         private void frmMain_Loaded(object sender, RoutedEventArgs e)
         {
             myDoughnutMachine = new DoughnutMachine();
             myDoughnutMachine.DoughnutComplete += new DoughnutMachine.DoughnutCompleteDelegate(DoughnutCompleteHandler);
         }
 
+        //creare Doughnuts glazed
         private void glazedToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             glazedToolStripMenuItem.IsChecked = true;
