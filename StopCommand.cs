@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 
-namespace Neag_Cristina_Lab2
+namespace Neag_Cristina_Lab2.CustomCommands
 {
     class StopCommand
     {

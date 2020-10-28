@@ -234,7 +234,7 @@ namespace Neag_Cristina_Lab2
                         break;
                     case "Chocolate":
                         mFilledChocolate = mFilledChocolate - Int32.Parse(s.Substring(0, s.IndexOf(" ")));
-                        txtChocolateFilled.Text = mFilledChocolate.ToString();
+                        txtChocolateFilled1.Text = mFilledChocolate.ToString();
                         break;
                     case "Lemon":
                         mFilledLemon = mFilledLemon - Int32.Parse(s.Substring(0, s.IndexOf(" ")));
